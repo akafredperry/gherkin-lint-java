@@ -2,7 +2,6 @@ package com.example.gherkinlint.rules;
 
 import com.example.gherkinlint.GherkinLintRule;
 import io.cucumber.messages.types.Pickle;
-import org.jetbrains.annotations.NotNull;
 
 import java.util.HashSet;
 import java.util.List;
@@ -26,7 +25,7 @@ public class UniqueIdQualifiedNameLintRule implements GherkinLintRule {
     this(toPattern(args));
   }
 
-  private static @NotNull Pattern toPattern(String[] args) {
+  private static Pattern toPattern(String[] args) {
     if (args.length == 0) {
       return Pattern.compile("(\\S+)\\s+(.+)");
     } else {
